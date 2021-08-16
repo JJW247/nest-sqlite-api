@@ -7,14 +7,29 @@ content-type: application/json
     "password" : "12341234"
 }
 
+### Login
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email" : "admin@admin.com",
+    "password" : "12341234"
+}
+
+### Get the current user information
+Get http://localhost:3000/auth/whoami
+
+### Logout
+POST http://localhost:3000/auth/signout
+
 ### Find a particular user with a given ID
-GET http://localhost:3000/auth/2
+GET http://localhost:3000/auth/6
 
 ### Find all users with a given email
 GET http://localhost:3000/auth?email=
 
 ### Delete a user given id
-DELETE http://localhost:3000/auth/21412412
+DELETE http://localhost:3000/auth/6
 
 ### Update a user
 PATCH http://localhost:3000/auth/1453453
